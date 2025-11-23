@@ -38,16 +38,34 @@ function App() {
     initializeGame()
   }, []) 
 
+  
+  const handleCardClick = (card)=>
+  {
+    if(card.isFlipped || card.isMatched)
+    {
+      return;
+    }
+    // flip the card
+    const newCards = cards.map((c) =>{
+       if(c.id === card.id){
+        return {...c, isFlipped: true}
+       }
+       else{
+        return c
+       }
+    });
+    setCards(newCards);
+  }
 
 
   return (
     <>  
      <GameHeader score={3} moves ={10}/>
          
-       <div className="cards-grid">
+       <div className="cards-grid" >
         {
           cards.map((card) => (
-            <Card card={card}/>
+            <Card card={card} onClick={handleCardClick}/>
           ))
         }  
        </div>

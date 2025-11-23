@@ -10,7 +10,7 @@ export const GameHeader = ({score, moves}) =>
           <span className="stat-value">{score}</span> 
         </div>
         <div className="stat-item">
-          <span className="stat-label">Score:</span>
+          <span className="stat-label">Moves:</span>
           <span className="stat-value">{moves}</span> 
          </div>
 
