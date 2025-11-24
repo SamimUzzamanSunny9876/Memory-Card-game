@@ -57,9 +57,8 @@ function App() {
     });
     setCards(newCards);
 
-    const newFlippedCard = [...flippedCards, card.id]
-    if(newFlippedCard)
-      
+    
+
   }
 
 
