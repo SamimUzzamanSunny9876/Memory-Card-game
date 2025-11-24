@@ -25,6 +25,7 @@ const cardValues = [
 function App() {
 
   const [cards, setCards] = useState([])
+  const [flippedCards, setFlippedCards] = useState([])
 
   const initializeGame = () =>{
     const finalCards = cardValues.map((value, index) =>({
@@ -55,6 +56,10 @@ function App() {
        }
     });
     setCards(newCards);
+
+    const newFlippedCard = [...flippedCards, card.id]
+    if(newFlippedCard)
+      
   }
 
 
